@@ -6,6 +6,8 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { TaoisighService } from './taoisigh.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [TaoisighService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
