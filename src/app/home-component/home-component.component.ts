@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Injectable }     from '@angular/core';
+import { TaoisighService } from 'app/taoisigh.service';
 
 @Component({
   selector: 'app-home-component',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponentComponent implements OnInit {
 
-  constructor() { }
+  public taoisigh: any;
+  constructor(session:TaoisighService) {
+    this.taoisigh = session.data;
+    console.log('taoisigh');
+    console.log(this.taoisigh);
+  }
 
   ngOnInit() {
   }
