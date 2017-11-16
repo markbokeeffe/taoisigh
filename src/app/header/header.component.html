@@ -1,1 +1,14 @@
-<mat-toolbar>My App</mat-toolbar>
+<mat-toolbar>
+  <a class="logo" routerLink="/">Taoisigh</a>
+  <span class="fill-space"></span>
+  <nav>
+    <span *ngFor="let screen of screens; let i = index">
+      <a routerLink="/{{screen.path}}" (click)="isClicked=i" [class.selected]="i === isClicked">
+        {{ screen.name }}
+      </a>
+      <span class="slash">/</span>
+    </span>
+  </nav>
+
+
+</mat-toolbar>

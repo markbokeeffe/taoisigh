@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HostListener } from '@angular/core';
-import { MatToolbarModule, MatButtonModule, MatCheckboxModule, MatGridListModule} from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCheckboxModule, MatGridListModule, MatTableModule} from '@angular/material';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 
 import { TaoisighService } from './taoisigh.service';
 import { TaoisighListComponent } from './taoisigh-list/taoisigh-list.component';
+import { ProfilesComponent } from './profiles/profiles.component';
+import { ChronologyComponent } from './chronology/chronology.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { TaoisighListComponent } from './taoisigh-list/taoisigh-list.component';
     HomeComponentComponent,
     HeaderComponent,
     FooterComponent,
-    TaoisighListComponent
+    TaoisighListComponent,
+    ProfilesComponent,
+    ChronologyComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +36,7 @@ import { TaoisighListComponent } from './taoisigh-list/taoisigh-list.component';
     MatCheckboxModule,
     MatGridListModule,
     HttpClientModule,
+    MatTableModule,
     RouterModule.forRoot([
       {
         path: '',
@@ -38,6 +45,18 @@ import { TaoisighListComponent } from './taoisigh-list/taoisigh-list.component';
       {
         path: 'home',
         component: HomeComponentComponent
+      },
+      {
+        path: 'profiles',
+        component: ProfilesComponent
+      },
+      {
+        path: 'chronology',
+        component: ChronologyComponent
+      },
+      {
+        path: 'statistics',
+        component: StatisticsComponent
       },
     ])
   ],

@@ -6,3 +6,8 @@
  background: linear-gradient(to right, #1f6115 , #182f17); /* Standard syntax */
  color:#fff;
 }
+
+
+.fill-space{
+  flex: 1 1 auto;
+}
